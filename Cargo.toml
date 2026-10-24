@@ -17,4 +17,5 @@ keywords = ["multimedia", "video", "av1", "codec", "pure-rust"]
 categories = ["multimedia::encoding", "multimedia::video"]
 
 [dependencies]
-oxideav-core = "0.1"
+# ffmpeg-rs fork: core from our fork so every consumer of ffmpeg-rs resolves the same oxideav-core (no [patch] needed).
+oxideav-core = { git = "ssh://git@github.com/ssoj13/oxideav-core.git", branch = "master" }
